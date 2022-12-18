@@ -1,0 +1,1810 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Montez', cursive;
+}
+
+.starterOverlay {
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    animation: starterGrow 1000ms forwards;
+
+
+}
+
+.closeStarter {
+    display: none;
+}
+
+
+.starterOverlayText {
+    color: hotpink;
+    font-weight: 600;
+    text-align: center;
+}
+
+@keyframes starterGrow {
+    from {
+        font-size: 0;
+    }
+    to {
+        font-size: 100px;
+    }
+}
+
+button {
+    border: solid;
+    color: rgb(233, 138, 252);
+    background-color: aliceblue;
+    border-color: rgb(221, 98, 135);
+    border-radius: 20px;
+    height: fit-content;
+    width: fit-content;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.visible {
+    display: flex;
+    flex-direction: column;
+    /* animation: overlay-grow 500ms forwards; */
+}
+
+.overlayText {
+    font-size: 80px;
+}
+
+.popUp {
+    width: 350px;
+    height: 365px;
+    display: flex;
+    flex-direction: column;
+    background-color: pink;
+    border-radius: 20px;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 25px 20px;
+    background-image: url('img/loserBg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: aqua;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+}
+
+.openPopUp {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    display: flex;
+    flex-direction: column;
+}
+
+.volumeSection {
+    margin-top: 3rem;
+    margin-left: 8rem;
+}
+
+.outer {
+    visibility: hidden;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    background-color: rgb(0, 0, 0, 0.3);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.openOuter {
+    visibility: visible;
+}
+
+p {
+    margin-top: -50px;
+}
+
+#twd {
+    font-size: 28px;
+    line-height: 60px;
+    text-decoration: none;
+    color: hotpink;
+}
+
+#rules {
+    color: hotpink;
+}
+
+span {
+    color: aliceblue;
+}
+
+#emoji {
+    text-decoration: none;
+}
+
+#never {
+    color: red;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#ohNo {
+    color: hotpink;
+    font-size: 30px;
+    text-decoration: none;
+    margin-top: -40px;
+    padding-bottom: 30px;
+}
+
+#twdTwo {
+    color: hotpink;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+#eternity {
+    color: rgb(255, 127, 249);
+}
+
+.cardOverlay {
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 80;
+    top: 27%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    animation: starterGrow 1000ms forwards;
+    display: flex;
+    visibility: hidden;
+
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.oneClick {
+    visibility: visible;
+}
+
+.loserButton {
+    height: 35px;
+    width: 110px;
+    margin-left: 12rem;
+    margin-top: 2rem;
+    border-color: rgb(221, 98, 135);
+    color: rgb(207, 78, 232);
+    background-color: aliceblue;
+}
+
+.loserButton:hover {
+    transform: scale(1.5);
+}
+
+#loserTextHeader {
+    margin-top: -6rem;
+    margin-bottom: 4rem;
+    color: hotpink;
+    animation: loserGrow 1000ms forwards;
+}
+
+.loserText, #loserTextParagraph {
+    padding-top: 25px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 35px;
+    color: aliceblue;
+    text-align: center;
+}
+
+.loserText {
+    width: 520px;
+    height: 580px;
+    display: flex;
+    flex-direction: column;
+    background-color: pink;
+    border-radius: 20px;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 25px 20px;
+    background-image: url('img/loserBg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: aliceblue;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+} 
+
+.openLoserText {
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    display: flex;
+    flex-direction: column;
+    animation: loserGrow 1000ms forwards;
+}
+
+@keyframes loserGrow {
+    from {
+        font-size: 0;
+    }
+    to {
+        font-size: 100px;
+    }
+}
+
+.passButton {
+    height: 35px;
+    width: 110px;
+    margin-left: 12rem;
+    margin-top: 2rem;
+    border-color: rgb(221, 98, 135);
+    color: rgb(207, 78, 232);
+    background-color: aliceblue;
+    font-size: 15px;
+}
+
+.passButton:hover {
+    transform: scale(1.5);
+}
+
+#passTextHeader {
+    margin-top: -4rem;
+    margin-bottom: 25rem;
+    color: hotpink;
+    animation: passGrow 1000ms forwards;
+}
+
+.passText, #passTextParagraph {
+    font-size: 28px;
+    font-weight: 600;
+    background-color: rgb(0, 0, 0, 0.8);
+    text-align: center;
+    line-height: 35px;
+    color: white;
+    text-align: center;
+}
+
+.passText {
+    width: 500px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    background-color: pink;
+    border-radius: 20px;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 25px 20px;
+    background-image: url('img/whatif.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: aliceblue;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+} 
+
+.openPassText {
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    display: flex;
+    flex-direction: column;
+    animation: passGrow 1000ms forwards;
+}
+
+.flexButtons {
+    display: flex;
+}
+
+.tryAgainButton {
+    height: 35px;
+    width: 110px;
+    margin: 2rem;
+    margin-top: -3rem;
+    border-color: rgb(221, 98, 135);
+    color: rgb(207, 78, 232);
+    background-color: rgb(255, 241, 240);
+    font-size: 20px;
+}
+
+.tryAgainButton:hover {
+    transform: scale(1.5);
+}
+
+#tryAgain {
+    color: rgb(171, 7, 84);
+    font-size: 35px;
+    line-height: 150px;
+}
+
+#tryAgainTextHeader {
+    margin-top: -3rem;
+    margin-bottom: 2rem;
+    color: rgb(180, 120, 223);
+    font-weight: 600;
+    letter-spacing: 5px;
+    animation: tryAgainGrow 1000ms forwards;
+}
+
+#tryAgainTextParagraph {
+    padding-top: 25px;
+    font-size: 25px;
+    text-align: center;
+    line-height: 35px;
+    color: black;
+    font-weight: 600;
+    text-align: center;
+    margin-top: -3rem;
+}
+
+.tryAgainText {
+    width: 450.5px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    background-color: pink;
+    border-radius: 20px;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 25px 20px;
+    background-image: url('img/cauldron.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+} 
+
+.openTryAgainText {
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    display: flex;
+    flex-direction: column;
+    animation: tryAgainGrow 1000ms forwards;
+}
+
+@keyframes tryAgainGrow {
+    from {
+        font-size: 0;
+    }
+    to {
+        font-size: 80px;
+    }
+}
+
+
+.winnerButton, .ventureButton {
+    background-color: aliceblue;
+    color: hotpink;
+    font-weight: 600;
+    height: 35px;
+    width: 110px;
+    margin: 2rem;
+}
+
+.ventureButton {
+    font-size: 18px;
+}
+
+.ventureButton:hover {
+    transform: scale(1.5);
+}
+
+.winnerButton {
+    font-size: 18px;
+}
+
+.winnerButton:hover {
+    transform: scale(1.5);
+}
+
+.winnerText, #winnerTextHeader {
+    margin-top: -2rem;
+    margin-bottom: 13rem;
+    /* font-weight: 600; */
+    color: rgb(40, 178, 216);
+    animation: winnerGrow 1000ms forwards;
+}
+
+.winnerText, #winnerTextParagraph {
+    padding-top: 25px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 35px;
+    color: aliceblue;
+}
+
+.winnerText {
+    width: 500px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    background-color: pink;
+    border-radius: 20px;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 25px 20px;
+    background-image: url('img/winner.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: aliceblue;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+}
+
+.openWinnerText {
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    display: flex;
+    flex-direction: column;
+    animation: winnerGrow 1000ms forwards;
+}
+
+@keyframes winnerGrow {
+    from {
+        font-size: 0;
+    }
+    to {
+        font-size: 80px;
+    }
+}
+
+#steal {
+    z-index: 100;
+    text-decoration: line-through;
+    color: red;
+    font-size: 17px;
+    margin-top: -18rem;
+    margin-bottom: -2.3rem;
+    margin-left: 7rem;
+}
+
+#mythical {
+    color: aqua;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.victorButton {
+    height: 35px;
+    width: 110px;
+    margin-left: 12rem;
+    margin-top: 1.5rem;
+    border-color: rgb(221, 98, 135);
+    color: rgb(207, 78, 232);
+    background-color: aliceblue;
+    font-size: 20px;
+    margin-bottom: -15rem;
+    margin-right: 11rem;
+}
+
+.victorButton:hover {
+    transform: scale(1.5);
+}
+
+#victorTextHeader {
+    color: yellow;
+    font-weight: 600;
+    letter-spacing: 8px;
+    margin-top: -14rem;
+    margin-bottom: 32rem;
+    animation: victorGrow 1000ms forwards;
+}
+
+.victorText, #victorTextParagraph {
+    font-size: 25px;
+    text-align: center;
+    line-height: 35px;
+    color: rgb(237, 155, 196);
+    text-align: center;
+    background-color: rgba(50, 14, 54, 0.5);
+    border-radius: 15px;
+    margin-bottom: -1rem;
+    margin-top: 1rem;
+}
+
+.victorText {
+    width: 450px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    background-color: pink;
+    border-radius: 20px;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 25px 20px;
+    background-image: url('img/orb.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: aliceblue;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+} 
+
+.openVictorText {
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    display: flex;
+    flex-direction: column;
+    animation: victorGrow 1000ms forwards;
+}
+
+@keyframes victorGrow {
+    from {
+        font-size: 0;
+    }
+    to {
+        font-size: 50px;
+    }
+}
+
+.header {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
+
+h1 {
+    color: aliceblue;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+h2 {
+    color: rgb(159, 236, 253);
+    font-size: 40px;
+    font-weight: 500;
+    /* background-color: rgb(245, 176, 188, 0.8); */
+    border-radius: 20px;
+    width: fit-content;
+}
+
+.container {
+    display: flex;
+    float: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: auto;
+    overflow: hidden;
+    /* margin-left: 50px;
+    padding-left: 200px;
+    margin-right: 100px;
+    padding-right: 0;
+    padding: none; */
+}
+
+#setOne, #setTwo {
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+/* #sectionOne, #sectionTwo { */
+    /* width: 3000px; */
+    /* display: flex; */
+    /* align-items: center;
+    justify-content: center;
+    align-content: center; */
+/* } */
+
+#scoreId {
+    left: 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#scoreDisplay {
+    margin-left: 24%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.resetButton, .rulesButton {
+    margin: 0.5rem 0rem;
+    padding: 0.3rem 1rem;
+}
+
+#buttons {
+    justify-content: center;
+    text-align: center;
+}
+
+.title {
+    font-size: 70px;
+    font-weight: 600;
+    background-color: #f3ec78;
+    background-image: linear-gradient(45deg,  purple, rgb(233, 125, 166), white);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
+.card {
+    color: red;
+    background-color: rgba(0, 0, 0, 0.00001);
+    border: none;
+    width: 130px;
+    height: 184px;
+    margin: 1rem 1rem;
+    margin-bottom: 2rem;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+  
+.cardFront, .cardBack {
+    font-size: 20px;
+    font-weight: 600;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgb(24, 24, 28);
+    height: 184px;
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: transform 1.5s ease;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+.cardFront {
+    background-image: url("https://lh3.googleusercontent.com/xC-hFlbA2x9-UxHVYnzm_wnNsv6tC62CfLPX92pkFxnLbzY9S1zK6xF7ZvyIcqqlvvlXwu91vE7X5sMIfEN6QA9bv2geaG8P-LBySZvRTahtXr-YBw1CntHedV5XpX8lLtGOadvWLg=w2400");
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  
+.cardHover:hover {
+    transform: scale(0.9);
+}
+
+.cardFront.ones, .cardFront.twos, .cardFront.threes, .cardFront.fours,
+.cardFront.fives, .cardFront.sixes, .cardFront.sevens, .cardFront.eights,
+.cardFront.nines, .cardFront.tens, .cardFront.jacks, .cardFront.queens,
+.cardFront.kings {
+    transform: perspective(1000px) rotateY(-180deg);
+  }
+
+  
+.cardBack {
+    transform: perspective(1000px) rotateY(180deg);
+    background-image: url('https://lh3.googleusercontent.com/2RGSupxOgRMze1aGgC4nktr3sdm_9oWnCeq1bdfVn2YQTpEwFd3AHrLIOcQ5AHinosUZU1RBQaGPKRrlUKp_IKIWpMP90hQv9P5bpLqfho0K4LWS2jsxk7wf0MmXsLfiPfMXPS5dEA=w2400');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: rgb(7, 2, 32);
+
+}
+  
+.cardBack.ones {
+    background-image: url('https://lh3.googleusercontent.com/fViTdlJhWzz7HAi_ZuR0z7_GJ2XTUmQfEAd7D8uisxsgde_DwFy8BYdxlsAKjFNlfzTOxnRcr_6AnYL7oMMPG5V6Yq03UZz-wgJJoi_bhniodOuNcdVyiJkvotIMaRoh_SFyXgbGZQ=w2400');
+    transform: perspective(1000px) rotateY(0deg);
+  }
+
+.cardBack.twos {
+    background-image: url('https://lh3.googleusercontent.com/UxRwy8ZRVKi9I3vvCqywI1hFa03AmJm_1eyS4a_Lo5-kbI7y5g6aMfpASjTj4uIYOjRxgSCuNxiu1mAaYT2g1Xs8NQkAE04YizX8DsLpPFW0Mlcd6Xm7bLKxGee7U8aXObQxLl3vyw=w2400');
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.cardBack.threes {
+    background-image: url('https://lh3.googleusercontent.com/6Pv1lbnkMjnbM9AodsRezKlBCrVB16IN3s9308PSI47ku_U-LNzTuuFFvMIlNMAWFwAh4d25rCCk_li67xbOxHFk86p2YKEcnjTbiqHS4aFK91IUYmFA7F71xPaR1P7rkuNpOoIXTQ=w2400');
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.cardBack.fours {
+    background-image: url('https://lh3.googleusercontent.com/JlS9OJxxMX7AdrDSPtOKneXjXfUd6WTxyW12g1HKgBfuGjtsiLKAUt54ZIMfdMxJ0vAy9Baj0aBpXwj_dO7KIJtYsBRC3cYi79SAmxVJ4gobALKAuftQjVYbDARzuR6U6przGNHESw=w2400');
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.cardBack.fives {
+    background-image: url('https://lh3.googleusercontent.com/wBs7tv1uGeX7NULvVnqE9859TuQNUjddqRoRrbcuTQ7kQMXf_8wiCNRUzawEgH_Uftmc9PL0uRjrpOd1Mz7X9cFjEYAGs74IqKy3gCc2Ip8hdRaWCW8YWOr2Q2EHQdFIh4EUWCz9ZA=w2400');
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.cardBack.sixes {
+    background-image: url('https://lh3.googleusercontent.com/2pzP1IUpdaaw4B9sLoI5ElNI_kXoGm0y5KR5kc1pHm4-MVx4fKiAB-qCMp-etTZrOtTRU3Tij3v1EdIrAgKG43dTXeJol0xiP1iyvGAUUn0_xzhQoA1ZPAY7H0vNFyqRYtaXDFpSZQ=w2400');
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.cardBack.sevens {
+    background-image: url('https://lh3.googleusercontent.com/wibNGPHuUgo8T_pl8Sn62AXyycQ-wnFp2kuTVsXKzHB0IWuNOXlFi4szZU29WiE4qkQ8re2h_cbgykMjRxsh5Y_wS30h-L9QUv1P6rZl7ZlTW30qskNXKdAxsRMWzovBWHUwXa9AwQ=w2400');
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.cardBack.eights {
+    background-image: url('https://lh3.googleusercontent.com/NTQ-BOCCYxdQ-G-Z726VSDUc7f_LHAamOPQ3YWmp9-_v-_hMsRiHg4yXLYmDR9d8Ird7mFJdXFm6dXBL3g7uxUMHym8OTJuD9JLTUy6uhI-K_wZmzxS6aMdmQuwA0unFg-RO2IK4WA=w2400');
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.cardBack.nines {
+    background-image: url('https://lh3.googleusercontent.com/qWnY5EjiuJFJknfkwprEQhqiu9dQ-0peMz9HOAcClRA3bGRI4WDFiaK-1N5LWd0Q_urwZzmRUbAp7az6Nq1D9hwgSy8B7GBN2m3p9k8ORUqThqym4tNFDUl03tZm2QaVNLayn6bzlA=w2400');
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.cardBack.tens {
+    background-image: url('https://lh3.googleusercontent.com/WwPLAmm-9Q4EB5Byh90zEJozQCi8qKMVeMDbwU4G91Dm1sYuEazRPzF-xOjeKmDAs6wYlKMITFAHN_ZKZJ2BrWfEBB81pIbgiM108fZce8Vr50tlbtpLnS0podhKf1K1ljGooMT4og=w2400');
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.cardBack.jacks {
+    background-image: url('https://lh3.googleusercontent.com/xLsgUyz8wlWs2UxvUfmZo8gmPlHkIKmHsr69ocexeXfd8IiKjK5ivICEK9K1ed9mjpLNWSDJRYz4Y8GJ0xl1n6eSPH0bGj-MTRA0FERaoZBzKl9Kdc2vokVUpEJJJemze10SqTJuYA=w2400');
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.cardBack.queens {
+    background-image: url('https://lh3.googleusercontent.com/QQryr9wwia4NpUwMUMilyRvskzGn5FyDe_2TlJ75r1qSrtt_VOrDfZVA2nwFY2bjFbaSAlwkBocpD9dIc98dkktQ6QH93xXb4drLcEHTrfnVOqRzN2vVMqtBlLHQvrikpaMuTQ8g7w=w2400');
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.cardBack.kings {
+    background-image: url('https://lh3.googleusercontent.com/QTJZNd2tISchubsw6O8X2ehsFsYx98R4ERe3r7MsRg6syfP8k3LPLXwaBYOC5NrnJA2L99HZs0ScykUuCa0oHf-gmEJrztyRX60BED_yxcIMeRlUmcQaAgxex0e9_ZUA1BDODEquKA=w2400');
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+
+body {
+    background: url('img/background3.jpg') no-repeat center center fixed;
+    background-size: cover;
+    /* min-height: 120vh; */
+    /* cursor: url(img/cursor.svg), auto; */
+}
+
+body {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+*.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------> MEDIA QUERIES <------ */
+
+@media screen and (max-width: 1380px) {
+
+    .title {
+        font-size: 65px;
+    }
+
+    .allCards {
+        margin-top: -3rem;
+    }
+
+    .card {
+        color: rgb(135, 240, 50);
+        height: 250px;
+        width: 110px;
+        margin-left: 30px;
+        margin-bottom: -20px;
+    }
+
+    .header {
+        padding-top: 60px;
+        padding-bottom: 0px;
+        margin-bottom: 40px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #setTwo {
+        margin-top: -2rem;
+    }
+}
+
+@media screen and (max-width: 1291px) {
+    .title {
+        font-size: 60px;
+    }
+
+    .card {
+        color: rgb(50, 240, 211);
+        height: 250px;
+        width: 110px;
+        margin-left: 30px;
+        margin-bottom: -20px;
+    }
+
+    .header {
+        padding-top: 60px;
+        padding-bottom: 0px;
+        margin-bottom: 40px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1179px) {
+    .title {
+        font-size: 75px;
+    }
+    
+    .card {
+        color: rgb(255, 196, 0);
+    }
+
+    .header {
+        margin-top: -1.5rem;
+    }
+
+    #setTwo {
+        margin-top: -2rem;
+    }
+}
+
+@media screen and (max-width: 1110px) {
+    .card {
+        color: blue;
+        height: 230px;
+        width: 100px;
+        margin-left: 30px;
+        margin-bottom: -20px;
+    }
+
+    .header {
+        padding-top: 60px;
+        padding-bottom: 30px;
+        margin-bottom: 0px;
+    }
+
+    #setOne {
+        margin-bottom: 80px;
+
+    }
+
+    #setTwo {
+        margin-top: -5.5rem;
+        margin-bottom: 0px;
+    }
+
+    #two {
+        /* margin-left: 30rem; */
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    .header {
+        margin: 0;
+    }
+
+    .allCards {
+        margin-top: 6rem;
+        margin-left: -4rem;
+    }
+
+    .cardBack, .cardFront {
+        height: 165px;
+        width: 117px;
+    }
+
+    .card {
+        color: rgb(251, 186, 237);
+        height: 80px;
+        width: 25px;
+        margin-left: 80px;
+        margin-bottom: -20px;
+    }
+
+    #setOne {
+        margin-top: -3rem;
+    }
+
+    #setTwo {
+        margin-top: 7rem;
+    }
+
+    #one, #two, #three, #four, #five, #six, #eight, #nine, #ten, #eleven, #twelve {
+        margin-right: 2rem;
+    }
+
+    .title {
+        font-size: 65px;
+    }
+
+}
+
+@media screen and (max-width: 980px) {
+    .card {
+        color: yellow;
+        width: 95px;
+        height: 128px;
+        margin: 0;
+    }
+
+    .header {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-left: 0.5rem;
+    }
+
+    .title {
+        font-size: 50px;
+        margin: 0rem -8rem;
+        margin-left: -2.8rem;
+        width: 30rem;
+    }
+
+    .rulesButton, .resetButton {
+        margin-left: -8rem;
+        margin-top: -1rem;
+        width: 4rem;
+        height: 2rem;
+        font-size: 15px;
+        padding: 0px;
+    }
+
+    #scoreId {
+        margin-right: -3rem;
+    }
+
+    #scoreDisplay {
+        margin-right: 2rem;
+        font-size: 32px;
+    }
+
+    #sectionOne {
+        margin-top: -5rem;
+        margin-left: 4rem;
+    }
+
+    #sectionTwo {
+        margin-top: 15rem;
+        margin-left: 2rem;
+    }
+
+    #one, #two, #three, #four {
+        margin-left: 2rem;
+    }
+
+    #thirteen, #twelve, #eleven, #ten {
+        margin-left: 2rem;
+    }
+
+    #seven, #six, #five {
+        position: absolute;
+        margin-top: 23rem;
+        margin-left: 41rem;
+    }
+
+    #eight, #nine {
+        position: absolute;
+        margin-bottom: 23rem;
+        margin-right: 37rem;
+    }
+
+    #eight {
+        margin-left: 1rem;
+    }
+
+    #nine {
+        margin-left: 20rem;
+    }
+
+    #five {
+        margin-right: 41rem;
+    }
+
+    #six {
+        margin-right: 22rem;
+    }
+
+    #seven {
+        margin-right: 3rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .card {
+        color: deeppink;
+    }
+
+    .title {
+        margin-left: -4.5rem;
+    }
+
+}
+
+@media screen and (max-width: 825px) {
+    .card {
+        color: black;
+    }
+
+    .title {
+        margin-left: -5rem;
+        width: 30rem;
+    }
+
+    .heading {
+        margin-right: 10rem;
+    }
+}
+
+@media screen and (min-width: 800px) and (min-height: 1100px) {
+    .card {
+        color: lightskyblue;
+    }
+
+    .allCards {
+        margin-top: 15rem;
+    }
+
+    .header {
+        margin-top: 1rem;
+    }
+
+    #one, #two, #three, #four {
+        margin-bottom: 5rem;
+    }
+
+    #thirteen, #twelve, #eleven, #ten {
+        margin-top: 5rem;
+    }
+
+    #five, #six, #seven {
+        margin-top: 29rem;
+    }
+
+    #eight, #nine {
+        margin-top: -4rem;
+    }
+ }
+
+@media screen and (max-width: 751px) {
+    .card {
+        color: orangered;
+    }
+
+    .header {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-left: 0.5rem;
+    }
+
+    .allCards {
+        margin-top: 6rem;
+        margin-left: -4rem;
+    }
+
+    .cardBack, .cardFront {
+        height: 135px;
+        width: 97px;
+    }
+
+    .title {
+        font-size: 42px;
+        margin-left: -7rem;
+    }
+
+    .rulesButton, .resetButton {
+        width: 3.5rem;
+        height: 1.5rem;
+        font-size: 15px;
+    }
+
+    #scoreDisplay {
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    #sectionOne {
+        margin-top: -5rem;
+        margin-left: 4rem;
+    }
+
+    #sectionTwo {
+        margin-top: 15rem;
+        margin-left: 4rem;
+    }
+
+    #one, #two, #three, #four {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    #thirteen, #twelve, #eleven, #ten {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    #seven, #six, #five {
+        margin-top: 23rem;
+        margin-left: 41rem;
+    }
+
+    #eight, #nine {
+        margin-bottom: 23rem;
+        margin-right: 35rem;
+    }
+
+    #eight {
+        margin-left: 5rem;
+    }
+
+    #nine {
+        margin-left: 20rem;
+    }
+
+    #five {
+        margin-right: 41rem;
+    }
+
+    #six {
+        margin-right: 26rem;
+    }
+
+    #seven {
+        margin-right: 11rem;
+    }
+}
+
+@media screen and (min-width: 750px) and (min-height: 1000px) {
+    .card {
+        color: lightskyblue;
+    }
+
+    .allCards {
+        margin-top: 15rem;
+    }
+
+    .header {
+        margin-top: 2rem;
+    }
+
+ }
+
+@media screen and (max-width: 699px) {
+    .starterOverlayText {
+        text-align: center;
+        width: 20rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+        .card {
+            color: cornflowerblue;
+        }
+
+        .title {
+            font-size: 38px;
+            margin-left: -4rem;
+            width: 22.8rem;
+        }
+}
+
+@media screen and (max-width: 609px) {
+    .winnerText {
+        width: 500px;
+        height: 540px;
+    }
+
+    #winnerTextHeader {
+        margin-top: 3rem
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .card {
+        color: rgb(65, 238, 65);
+    }
+
+    .cardBack, .cardFront {
+        height: 124px;
+        width: 87px;
+    }
+
+    .title {
+        font-size: 35px;
+        margin-left: -5rem;
+        width: 21.5rem;
+    }
+
+    .rulesButton, .resetButton {
+        width: 2.5rem;
+        height: 2rem;
+        font-size: 11px;
+    }
+
+    #scoreDisplay {
+        font-size: 20px;
+    }
+
+    #sectionOne {
+        margin-left: 4rem;
+    }
+
+    #sectionTwo {
+        margin-left: 4rem;
+    }
+
+    #one, #two, #three, #four {
+        margin-left: .2rem;
+        margin-right: .2rem;
+    }
+
+    #thirteen, #twelve, #eleven, #ten {
+        margin-left: .2rem;
+        margin-right: .2rem;
+    }
+
+    #eight {
+        margin-left: 11rem;
+    }
+
+    #nine {
+        margin-left: 23rem;
+    }
+
+    #five {
+        margin-right: 41rem;
+    }
+
+    #six {
+        margin-right: 29rem;
+    }
+
+    #seven {
+        margin-right: 17rem;
+    }
+}
+
+@media screen and (max-width: 566px) {
+    .loserText {
+        width: 480px;
+        height: 540px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .card {
+        color: papayawhip;
+    }
+
+    .title {
+        font-size: 34px;
+        margin-left: -5.5rem;
+    }
+}
+
+
+@media screen and (max-width: 525px) {
+    .card {
+        color: red;
+    }
+
+    .title {
+        font-size: 34px;
+        margin-left: -5.8rem;
+    }
+
+    #buttons {
+        padding-left: 0.3rem;
+    }
+
+    #scoreDisplay {
+        color: blueviolet;
+    }
+}
+
+@media screen and (max-width: 524px) {
+    .card {
+        color: rosybrown;
+    }
+
+    .cardBack, .cardFront {
+        height: 96px;
+        width: 67px;
+    }
+
+    .title {
+        font-size: 25px;
+        margin-left: 0rem;
+        width: 8rem;
+    }
+
+    #buttons {
+        padding-left: 4rem;
+    }
+
+    .rulesButton, .resetButton {
+        width: 2.5rem;
+        height: 2rem;
+        font-size: 11px;
+    }
+
+    #scoreId {
+        padding-right: 5rem;
+    }
+
+    #scoreDisplay {
+        font-size: 18px;
+    }
+
+    #sectionOne {
+        margin-left: 4rem;
+    }
+
+    #sectionTwo {
+        margin-left: 4rem;
+    }
+
+    #one, #two, #three, #four {
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
+        margin-top: -2rem;
+    }
+
+    #thirteen, #twelve, #eleven, #ten {
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
+        margin-top: -21rem;
+    }
+
+    #eight {
+        margin-left: 29rem;
+        margin-bottom: -13.55rem;
+    }
+
+    #nine {
+        margin-left: 23rem;
+        margin-bottom: 3rem;
+    }
+
+    #five {
+        margin-right: 41rem;
+        margin-bottom: -10.1rem;
+    }
+
+    #six {
+        margin-right: 29rem;
+        margin-bottom: -10.1rem;
+    }
+
+    #seven {
+        margin-right: 35rem;
+        margin-bottom: -26.5rem;
+    }
+}
+
+@media screen and (max-width: 520px) and (min-height: 700px) {
+    .card {
+        color: blue;
+    }
+
+    .allCards {
+        margin-top: 9rem;
+    }
+ }
+
+@media screen and (max-width: 520px) and (min-height: 800px) {
+    .card {
+        color: yellow;
+    }
+
+    .allCards {
+        margin-top: 11rem;
+    }
+
+ }
+
+@media screen and (max-width: 520px) and (min-height: 850px) {
+    .card {
+        color: green;
+    }
+
+    .allCards {
+        margin-top: 13rem;
+    }
+ }
+
+@media screen and (max-width: 520px) and (min-height: 900px) {
+    .card {
+        color: purple;
+    }
+
+    .allCards {
+        margin-top: 15rem;
+    }
+
+    .header {
+        margin-top: 1rem;
+    }
+
+ }
+
+ @media screen and (max-width: 514px) {
+    .passText {
+        width: 400px;
+        height: 500px;
+    }
+ }
+
+ 
+@media screen and (max-width: 496px) {
+    .loserText {
+        width: 440px;
+        height: 500px;
+    }
+
+    #loserTextHeader {
+        font-size: 30px;
+        margin-top: -1rem ;
+    }
+}
+
+ @media screen and (max-width: 450px) {
+    .volumeSection {
+        display: none;
+    }
+ }
+
+@media screen and (max-width: 440px) {
+    .winnerText {
+        width: 400px;
+        height: 500px;
+    }
+
+    #winnerTextHeader {
+        margin-top: 0rem;
+        margin-bottom: 12rem;
+    }
+
+    #winnerTextParagraph {
+        width: 25rem;
+        margin-top: -5rem;
+    }
+
+    .ventureButton, .winnerButton {
+        margin: 0;
+        margin-top: 4rem;
+        margin-left: 1rem;
+        height: 35px;
+        width: 8.5rem;
+    }
+}
+
+ @media screen and (max-width: 430px) {
+    .loserText {
+        width: 360px;
+        height: 420px;
+        margin-top: -1rem;
+    }
+
+    #loserTextHeader {
+        margin-top: -1rem;
+        margin-bottom: 3rem;
+    }
+
+    #loserTextParagraph {
+        animation: none;
+        font-size: 20px;
+    }
+
+    .loserButton {
+        margin-left: 0;
+    }
+
+    @keyframes loserGrow {
+        from {
+            font-size: 0;
+        }
+        to {
+            font-size: 50px;
+        }
+    }
+ }
+ 
+ @media screen and (max-width: 409px) {
+    .passText {
+        width: 300px;
+        height: 400px;
+    }
+
+    #passTextParagraph {
+        font-size: 20px;
+        margin-top: -7rem;
+    }
+
+    .passButton {
+        margin: 0;
+        padding: 0;
+        margin-top: 0.5rem;
+    }
+
+    .tryAgainText {
+        width: 350px;
+        height: 500px;
+    }
+
+    #tryAgainTextHeader {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    @keyframes tryAgainGrow {
+        from {
+            font-size: 0;
+        }
+        to {
+            font-size: 40px;
+        }
+    }
+ }
+
+ @media screen and (max-width: 394px) {
+    .winnerText {
+        width: 310px;
+        height: 400px;
+    }
+
+    #winnerTextHeader {
+        margin-top: 1rem;
+        margin-bottom: 7rem;
+    }
+
+    #winnerTextParagraph {
+        width: 25rem;
+        margin-top: -5rem;
+        font-size: 19px;
+    }
+
+    #twdTwo {
+        font-size: 22px;
+    }
+
+    .ventureButton, .winnerButton {
+        margin: 0;
+        margin-top: 4rem;
+        margin-left: 0rem;
+        height: 35px;
+        width: 8rem;
+        font: 17px;
+    }
+
+    .ventureButton {
+        margin-right: 0.5rem;
+    }
+
+    .winnerButton {
+        margin-left: 0.5rem;
+    }
+
+    @keyframes winnerGrow {
+        from {
+            font-size: 0;
+        }
+        to {
+            font-size: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 378px) {
+    .victorText {
+        width: 350px;
+        height: 500px;
+    }
+
+    #victorTextHeader {
+        margin-top: -12rem;
+        margin-bottom: 27rem;
+    }
+    
+    @keyframes victorGrow {
+        from {
+            font-size: 0;
+        }
+        to {
+            font-size: 40px;
+        }
+    }
+}
+
+ @media screen and (max-width: 363px) {
+    .popUp {
+        width: 300px;
+        height: 365px;
+        padding: 0px 25px 20px;
+        background-size: 100% 100%;
+ }
+
+    .popUp > p {
+        margin: 0;
+        padding: 0;
+        margin-top: -2rem;
+    }
+
+ }
+
+ 
+ @media screen and (max-width: 361px) {
+    .loserText {
+        width: 300px;
+        height: 330px;
+        margin-top: -1rem;
+    }
+
+    #loserTextParagraph {
+        font-size: 17px;
+    }
+
+    .loserButton {
+        margin-top: 0;
+    }
+
+    @keyframes loserGrow {
+        from {
+            font-size: 0;
+        }
+        to {
+            font-size: 30px;
+        }
+    }
+ }
+
+ @media screen and (max-width: 334px) {
+    .starterOverlayText {
+        font-size: 80px;
+        width: 15rem;
+    }
+}
+
+@media screen and (max-width: 311px) {
+    #tryAgainTextParagraph {
+        font-size: 18px;
+        width: 15rem;
+    }
+
+    .tryAgainButton {
+        margin: 0;
+        margin-right: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 310px) {
+    #victorTextParagraph {
+        font-size: 19px;
+    }
+
+    #mythical {
+        font-size: 22px;
+    }
+}

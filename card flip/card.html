@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="card.css">
+  <title>Parcel Sandbox</title>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+    <div class="overlay-text">
+        Click to Start
+    </div>
+    <div class="overlay-text" id="gameOverText">
+        GAME OVER
+        <span class="overlay-text-small">Try again?</span>
+    </div>
+    <div class="overlay-text" id="victoryText">
+        VICTORY
+        <span class="overlay-text-small">Try again?</span>
+    </div>
+    <div class="header">
+        <div class="col-4 text-center" id="buttons">
+            <div id="resetButton">
+                <button>RESET</button>
+            </div>
+            <div class="" id="infoButton">
+                <button>INFO</button>
+            </div>
+        </div>
+        <div class="col-4 text-center" id="heading">
+            <h1>Welcome To The <br> Witch's Den !</h1>
+        </div>
+        <div class="col-4 text-center">
+            <h2 id="scoreDisplay">SCORE: 0</h2>
+        </div>
+    </div>
+
+    
+  <div class="container">
+    <div class="card">
+      <div id="firstCardBack" class="cardBack">Back</div>
+      <div id="cardOne" class="cardFront">Front</div>
+    </div>
+  </div>
+
+  <script src="card.js"></script>
+</body>
+
+</html>

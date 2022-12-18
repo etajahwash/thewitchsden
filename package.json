@@ -1,0 +1,12 @@
+{
+  "name": "the-witch's-den",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.html",
+  "scripts": {
+    "build": "npm index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

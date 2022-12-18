@@ -1,0 +1,62 @@
+  .container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+  }
+
+  body {
+    background-color: purple;
+  }
+  
+
+  .card {
+    margin-top: 1rem;
+    height: 300px;
+    width: 250px;
+    position: relative;
+    border-radius: 0.25rem;
+  }
+  
+  .cardFront,
+  .cardBack {
+    color: red;
+    font-size: 20px;
+    font-weight: 600;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgb(24, 24, 28);
+    height: 184px;
+    width: 130px;
+    margin: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+    transition: transform 1.5s ease;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .cardBack {
+    transform: perspective(1000px) rotateY(180deg);
+  }
+  
+  .cardBack.ones {
+    background-image: url('https://lh3.googleusercontent.com/fViTdlJhWzz7HAi_ZuR0z7_GJ2XTUmQfEAd7D8uisxsgde_DwFy8BYdxlsAKjFNlfzTOxnRcr_6AnYL7oMMPG5V6Yq03UZz-wgJJoi_bhniodOuNcdVyiJkvotIMaRoh_SFyXgbGZQ=w2400');
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  
+  .cardFront {
+    background-image: url("https://lh3.googleusercontent.com/xC-hFlbA2x9-UxHVYnzm_wnNsv6tC62CfLPX92pkFxnLbzY9S1zK6xF7ZvyIcqqlvvlXwu91vE7X5sMIfEN6QA9bv2geaG8P-LBySZvRTahtXr-YBw1CntHedV5XpX8lLtGOadvWLg=w2400");
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  
+  .cardFront.ones {
+    transform: perspective(1000px) rotateY(-180deg);
+  }
+  
+  
