@@ -1,10 +1,10 @@
 {
-  "name": "the-witch's-den",
+  "name": "the-witchs-den",
   "version": "1.0.0",
   "description": "",
   "main": "app.html",
   "scripts": {
-    "build": "npm index.html"
+    "start": "index.html"
   },
   "keywords": [],
   "author": "",
