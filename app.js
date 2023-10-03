@@ -43,7 +43,6 @@ const starter = document.getElementById('starterOverlay')
 const starterText = document.getElementById('starterText')
 const cardOverlay = document.getElementById('cardOverlay')
 const volumeControl = document.querySelector('.volumeControl')
-// const window = window
 let scoreCount = 0;
 let isGameOver = true;
 let counter = 0;
@@ -56,12 +55,13 @@ const buttonAudio = new Audio('audios/buttonSound.mp3')
 const barkAudio = new Audio('audios/bark.wav')
 const awwwAudio = new Audio('audios/awww.mp3')
 const humAudio = new Audio('audios/hum2.wav')
+const wooAudio = new Audio('audios/woo.wav')
 backgroundMusic.loop = true;
 backgroundMusic.volume = 0.7
 humAudio.loop = true;
 bubblingAudio.loop = true;
 
-document.addEventListener('visibilitychange', event => {
+document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === "hidden") {
         backgroundMusic.pause()
     } else {
@@ -106,6 +106,7 @@ function win() {
 }
 
 function victory() {
+    wooAudio.play()
     victor.classList.add('visible')
     victorText.classList.add('openVictorText')
 }
@@ -129,6 +130,7 @@ volumeControl.addEventListener('change', function (e) {
     barkAudio.volume = e.currentTarget.value / 100;
     awwwAudio.volume = e.currentTarget.value / 100;
     humAudio.volume = e.currentTarget.value / 100;
+    wooAudio.volume = e.currentTarget.value / 100;
 })
 
 const randomNumber = () => {
@@ -233,12 +235,6 @@ function closeLoserScreen() {
     loserText. classList.remove('openLoserText')
 }
 
-// function closeWinnerScreen() {
-//     winner.classList.remove('visible')
-//     winnerText. classList.remove('openWinnerText')
-//     reseter()
-// }
-
 function closePassScreen() {
     pass.classList.remove('visible')
     passText. classList.remove('openPassText')
@@ -252,7 +248,6 @@ function ventureScreen() {
     winnerText. classList.remove('openWinnerText')
     reseter()
     counter = 5
-    // console.log(`counter equals: ${counter}`)
 }
 
 function closeVictorScreen() {
@@ -268,7 +263,6 @@ function closeTryAgainScreen() {
     tryAgainText. classList.remove('openTryAgainText')
     reseter()
     counter = 10
-    // console.log(`counter equals: ${counter}`)
 }
 
 function giveUp() {

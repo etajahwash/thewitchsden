@@ -23,7 +23,6 @@
         </div>
 
         <div class="overlay" id="loserOverlay">
-            <!-- <span class="overlayText"></span> -->
         </div>
         <div class="loserText" id="loserText">
             <p id="loserTextHeader">OH, NO!</p>
@@ -31,7 +30,7 @@
                 own personal puppy! You will live the rest <br> of your days comfortably but you will
                 <br> <span id="never">NEVER</span> use a toilet again!
             </p>
-            <button type="submit" class="loserButton" onclick="closeLoserScreen()">
+            <button type="submit" class="loserButton mblTxt" onclick="closeLoserScreen()">
                 <h5>Play Again</h5>
             </button>
         </div>
@@ -44,8 +43,8 @@
                 <span id="tryAgain">Try to escape again?</span>
             </p>
             <div class="flexButtons">
-                <button type="submit" class="tryAgainButton" onclick="closeTryAgainScreen()">Uh..obviously</button>
-                <button type="submit" class="tryAgainButton" onclick="giveUp()">Give Up</button>
+                <button type="submit" class="tryAgainButton mblTxt" onclick="closeTryAgainScreen()">Uh..obviously</button>
+                <button type="submit" class="tryAgainButton mblTxt" onclick="giveUp()">Give Up</button>
             </div>
         </div>
 
@@ -55,7 +54,7 @@
             <p id="passTextParagraph">You've given up a once in a lifetime opportunity! The what-ifs will
                 haunt you for an <span id="eternity">eternity</span>.
             </p>
-            <button type="submit" class="passButton" onclick="closePassScreen()">PLAY AGAIN</button>
+            <button type="submit" class="passButton mblTxt" onclick="closePassScreen()">PLAY AGAIN</button>
         </div>
 
         <div class="overlay" id="winnerOverlay"></div>
@@ -65,20 +64,20 @@
                 But can you shake the many secrets <br> that lye hidden within?
             </p>
             <div class="flexButtons">
-                <button type="submit" class="ventureButton" onclick="ventureScreen()">Venture back in!</button>
-                <button type="submit" class="winnerButton" onclick="toPass()">I'll pass</button>    
+                <button type="submit" class="ventureButton mblTxt" onclick="ventureScreen()">Venture back!</button>
+                <button type="submit" class="winnerButton mblTxt" onclick="toPass()">I'll pass</button>    
             </div>
         </div>
 
         <div class="overlay" id="victorOverlay"></div>
         <div class="victorText" id="victorText">
             <p id="victorTextHeader">SUCCESS!</p>
-            <p id="steal"><span id="stealDec">steal</span></p>
-            <p id="victorTextParagraph">You've managed to acquire the <br> <span id="mythical">Mythical Orb of Knowledge!</span> <br>
+            <p id="steal">acquire</p>
+            <p id="victorTextParagraph">You've managed to <span id="realSteal">steal</span> the <br> <span id="mythical">Mythical Orb of Knowledge!</span> <br>
                 Hopefully the witch won't miss it too much... Huh? What was that noise? <br> I think it's time to
                 get out of these woods!
             </p>
-            <button type="submit" class="victorButton" onclick="closeVictorScreen()">Play Again</button>
+            <button type="submit" class="victorButton mblTxt" onclick="closeVictorScreen()">Play Again</button>
         </div>
     </section>
 

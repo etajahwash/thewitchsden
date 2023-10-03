@@ -16,8 +16,6 @@
     display: flex;
     flex-direction: column;
     animation: starterGrow 1000ms forwards;
-
-
 }
 
 .closeStarter {
@@ -66,7 +64,6 @@ button {
 .visible {
     display: flex;
     flex-direction: column;
-    /* animation: overlay-grow 500ms forwards; */
 }
 
 .overlayText {
@@ -194,9 +191,6 @@ span {
     animation: starterGrow 1000ms forwards;
     display: flex;
     visibility: hidden;
-
-    /* display: flex;
-    flex-direction: column; */
 }
 
 .oneClick {
@@ -473,7 +467,6 @@ span {
 .winnerText, #winnerTextHeader {
     margin-top: -2rem;
     margin-bottom: 13rem;
-    /* font-weight: 600; */
     color: rgb(40, 178, 216);
     animation: winnerGrow 1000ms forwards;
 }
@@ -536,18 +529,29 @@ span {
 
 #steal {
     z-index: 100;
-    text-decoration: line-through;
-    color: red;
-    font-size: 17px;
+    font-size: 26px;
     margin-top: -18rem;
     margin-bottom: -2.3rem;
     margin-left: 7rem;
+    color: rgb(237, 155, 196);
+    padding-bottom: 0.1rem;
+    font-weight: 800;
+    font-style: italic;
+}
+
+#realSteal {
+    text-decoration: line-through;
+    text-decoration-color: red;
+    text-decoration-thickness: 2px;
+    color: rgb(237, 155, 196);
 }
 
 #mythical {
-    color: aqua;
+    /* color: aqua; */
     font-size: 30px;
     font-weight: 600;
+    animation: victorColors 3s infinite;
+
 }
 
 .victorButton {
@@ -561,6 +565,7 @@ span {
     font-size: 20px;
     margin-bottom: -15rem;
     margin-right: 11rem;
+    padding-bottom: 2rem;
 }
 
 .victorButton:hover {
@@ -636,6 +641,14 @@ span {
     }
 }
 
+@keyframes victorColors {
+    0% { color: aqua; }
+    25% { color: aqua; }
+    50% { color: rgb(237, 255, 37); }
+    75% { color: aqua; }
+    100% { color: aqua; }
+  }
+
 .header {
     font-size: 20px;
     display: flex;
@@ -656,7 +669,6 @@ h2 {
     color: rgb(159, 236, 253);
     font-size: 40px;
     font-weight: 500;
-    /* background-color: rgb(245, 176, 188, 0.8); */
     border-radius: 20px;
     width: fit-content;
 }
@@ -670,11 +682,6 @@ h2 {
     height: auto;
     width: auto;
     overflow: hidden;
-    /* margin-left: 50px;
-    padding-left: 200px;
-    margin-right: 100px;
-    padding-right: 0;
-    padding: none; */
 }
 
 #setOne, #setTwo {
@@ -682,14 +689,6 @@ h2 {
     justify-content: center;
     align-content: center;
 }
-
-/* #sectionOne, #sectionTwo { */
-    /* width: 3000px; */
-    /* display: flex; */
-    /* align-items: center;
-    justify-content: center;
-    align-content: center; */
-/* } */
 
 #scoreId {
     left: 50%;
@@ -856,8 +855,6 @@ h2 {
 body {
     background: url('img/background3.jpg') no-repeat center center fixed;
     background-size: cover;
-    /* min-height: 120vh; */
-    /* cursor: url(img/cursor.svg), auto; */
 }
 
 body {
@@ -992,10 +989,6 @@ body {
     #setTwo {
         margin-top: -5.5rem;
         margin-bottom: 0px;
-    }
-
-    #two {
-        /* margin-left: 30rem; */
     }
 }
 
@@ -1573,6 +1566,12 @@ body {
     .volumeSection {
         display: none;
     }
+
+    .mblTxt {
+        font-size: 16px;
+        text-indent: 0;
+    }
+
  }
 
 @media screen and (max-width: 440px) {
