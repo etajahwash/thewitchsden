@@ -45,6 +45,7 @@ const cardOverlay = document.getElementById('cardOverlay')
 const volumeControl = document.querySelector('.volumeControl')
 let scoreCount = 0;
 let isGameOver = true;
+let randomNums = [];
 let counter = 0;
 
 const backgroundMusic = new Audio('audios/backgroundMusic.mp3')
@@ -67,6 +68,7 @@ document.addEventListener('visibilitychange', () => {
     } else {
         backgroundMusic.play()
     }
+    
 })
 
 function openPopUp() {
@@ -135,7 +137,6 @@ volumeControl.addEventListener('change', function (e) {
 
 const randomNumber = () => {
 cardNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
-randomNums = [];
 i = cardNums.length;
 j = 0;
 
@@ -144,59 +145,15 @@ j = 0;
         randomNums.push(cardNums[j]);
         cardNums.splice(j, 1);
     }
-    // console.log(randomNums);
 };
 
 const cardCounter = function () {
-    switch (counter) {
-        case 0:
-        case 1:
-        case 2:
-        case 3:
-        case 4:
             counter += 1
-            break;
-        case 5:
-        break;  
     }
-    //   console.log(`counter equals: ${counter}`);
-    }
-
-const cardCounterTwo = function () {
-            counter += 1
-    //   console.log(`counter equals: ${counter}`);
-    }
-
 
 const reset = (x, y) => {
-   if (x, y) {
-    x.classList.remove('ones')
-    y.classList.remove('ones')
-    x.classList.remove('twos')
-    y.classList.remove('twos')
-    x.classList.remove('threes')
-    y.classList.remove('threes')
-    x.classList.remove('fours')
-    y.classList.remove('fours')
-    x.classList.remove('fives')
-    y.classList.remove('fives')
-    x.classList.remove('sixes')
-    y.classList.remove('sixes')
-    x.classList.remove('sevens')
-    y.classList.remove('sevens')
-    x.classList.remove('eights')
-    y.classList.remove('eights')
-    x.classList.remove('nines')
-    y.classList.remove('nines')
-    x.classList.remove('tens')
-    y.classList.remove('tens')
-    x.classList.remove('jacks')
-    y.classList.remove('jacks')
-    x.classList.remove('queens')
-    y.classList.remove('queens')
-    x.classList.remove('kings')
-    y.classList.remove('kings')
-   }
+    x.classList.remove('ones', 'twos', 'threes','fours','fives','sixes','sevens','eights','nines','tens','jacks','queens','kings')
+    y.classList.remove('ones', 'twos', 'threes','fours','fives','sixes','sevens','eights','nines','tens','jacks','queens','kings')
 }
 
 const reseter = () => {
@@ -217,6 +174,7 @@ const reseter = () => {
     counter = 0
     scoreDisplay.innerText = `SCORE: ${scoreCount}`
     resetAudio.play()
+    randomNums = []
     randomNumber()
 }
 
@@ -389,130 +347,28 @@ const cardThirteenFront = () => {
 const cardEventListeners = (x,y,z) => {
 
     document.querySelector(x).addEventListener('click', function (e) {
-        if(counter <= 2){
             setTimeout(closeCardsOverlay, 500)
             y();
             giggleAudio.currentTime = 0;
             giggleAudio.play()
             if (randomNums[z]) {
             scoreDisplay.innerText = `SCORE: ${scoreCount += randomNums[z]}`;
-            // console.log(`score just added: ${randomNums[z]}`);
             }
             openCardsOverlay()
             cardCounter();
-        } else if (counter === 3) {
-            setTimeout(closeCardsOverlay, 500)
-                cardCounter();
-                y();
-                giggleAudio.currentTime = 0;
-                giggleAudio.play()
-                if (randomNums[z]) {
-                scoreDisplay.innerText = `SCORE: ${scoreCount += randomNums[z]}`;
-                // console.log(`score just added: ${randomNums[z]}`);
-                }
-                openCardsOverlay()
-                if(scoreCount >= 38) {
-                    win()
-                }
-        } else if (counter === 4) {
-            setTimeout(closeCardsOverlay, 500)
-                cardCounter()
-                    y();
-                    giggleAudio.currentTime = 0;
-                    giggleAudio.play()
-                    if (randomNums[z]) {
-                    scoreDisplay.innerText = `SCORE: ${scoreCount += randomNums[z]}`;
-                    // console.log(`score just added: ${randomNums[z]}`);
-                    }
-                    openCardsOverlay()
-                    if(scoreCount >= 38) {
-                        win()
-                    } else if (scoreCount <= 37) {
-                        secondChance()
-                    }
-        } else if(counter === 5 || counter === 6 || counter === 7){
-                setTimeout(closeCardsOverlay, 500)
-                y();
-                giggleAudio.currentTime = 0;
-                giggleAudio.play()
-                if (randomNums[z]) {
-                scoreDisplay.innerText = `SCORE: ${scoreCount += randomNums[z]}`;
-                // console.log(`score just added: ${randomNums[z]}`);
-                    }
-                openCardsOverlay()
-                cardCounterTwo();
-        } else if (counter === 8) {
-                        setTimeout(closeCardsOverlay, 500)
-                        cardCounterTwo();
-                        y();
-                        giggleAudio.currentTime = 0;
-                        giggleAudio.play()
-                        if (randomNums[z]) {
-                        scoreDisplay.innerText = `SCORE: ${scoreCount += randomNums[z]}`;
-                        // console.log(`score just added: ${randomNums[z]}`);
-                        }
-                        openCardsOverlay()
-                        if(scoreCount >= 38) {
-                            victory()
-                        }
-        } else if (counter === 9) {
-                    setTimeout(closeCardsOverlay, 500)
-                            y();
-                            giggleAudio.currentTime = 0;
-                            giggleAudio.play()
-                            if (randomNums[z]) {
-                            scoreDisplay.innerText = `SCORE: ${scoreCount += randomNums[z]}`;
-                            // console.log(`score just added: ${randomNums[z]}`);
-                            }
-                            openCardsOverlay()
-                            if(scoreCount >= 38) {
-                                victory()
-                            } else if (scoreCount <= 37) {
-                                lose()
-                            }
-        } else if(counter >= 10) {
-                    if(counter <= 12){
-                                setTimeout(closeCardsOverlay, 500)
-                                y();
-                                giggleAudio.currentTime = 0;
-                                giggleAudio.play()
-                                if (randomNums[z]) {
-                                scoreDisplay.innerText = `SCORE: ${scoreCount += randomNums[z]}`;
-                                // console.log(`score just added: ${randomNums[z]}`);
-                                    }
-                                openCardsOverlay()
-                                cardCounterTwo();
-                    } else if (counter === 13) {
-                                        setTimeout(closeCardsOverlay, 500)
-                                        cardCounterTwo();
-                                        y();
-                                        giggleAudio.currentTime = 0;
-                                        giggleAudio.play()
-                                        if (randomNums[z]) {
-                                        scoreDisplay.innerText = `SCORE: ${scoreCount += randomNums[z]}`;
-                                        // console.log(`score just added: ${randomNums[z]}`);
-                                        }
-                                        openCardsOverlay()
-                                        if(scoreCount >= 38) {
-                                            win()
-                                        }
-                    } else if (counter === 14) {
-                                            setTimeout(closeCardsOverlay, 500)
-                                            y();
-                                            giggleAudio.currentTime = 0;
-                                            giggleAudio.play()
-                                            if (randomNums[z]) {
-                                            scoreDisplay.innerText = `SCORE: ${scoreCount += randomNums[z]}`;
-                                            // console.log(`score just added: ${randomNums[z]}`);
-                                            }
-                                            openCardsOverlay()
-                                            if(scoreCount >= 38) {
-                                                win()
-                                            } else if (scoreCount <= 37) {
-                                                lose()
-                                            }
-                    }
-        }
+
+        if ((counter === 4 || counter === 5) && scoreCount >= 38) return win()
+
+        if (counter === 5 && scoreCount <= 38) return secondChance()
+
+        if ((counter >= 9 || counter === 10) && scoreCount >= 38) return victory()
+
+        if (counter === 10 && scoreCount <= 38) return lose()
+
+        if ((counter === 14 || counter === 15) && scoreCount >= 38) return win()
+
+        if (counter === 15 && scoreCount <= 38) return lose()
+
     })
 }
 
@@ -533,6 +389,6 @@ cardEventListeners('#cardTen', cardTenFront, 9)
 cardEventListeners('#cardEleven', cardElevenFront, 10)
 cardEventListeners('#cardTwelve', cardTwelveFront, 11)
 cardEventListeners('#cardThirteen', cardThirteenFront, 12)
-
 }
+
 cardSelection()
