@@ -361,7 +361,7 @@ const cardEventListeners = (x,y,z) => {
 
         if (counter === 5 && scoreCount <= 38) return secondChance()
 
-        if ((counter >= 9 || counter === 10) && scoreCount >= 38) return victory()
+        if ((counter === 9 || counter === 10) && scoreCount >= 38) return victory()
 
         if (counter === 10 && scoreCount <= 38) return lose()
 
